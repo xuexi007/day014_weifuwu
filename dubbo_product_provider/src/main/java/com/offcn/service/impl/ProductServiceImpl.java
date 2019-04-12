@@ -53,6 +53,7 @@ public class ProductServiceImpl implements ProductService {
                 product.setStock(0);
             }
         }
+        System.out.println("更新");
         PageInfo<Product> pageInfo = new PageInfo<>(list);
         return pageInfo;
     }
