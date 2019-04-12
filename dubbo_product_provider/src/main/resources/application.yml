@@ -1,0 +1,18 @@
+#加载dao配置
+spring:
+  profiles:
+    include: db
+dubbo:
+  registry:
+    protocol: zookeeper
+    address: zookeeperserver:2181
+  application:
+    name: dubbo_product_provider
+  protocol:
+    port: 20881
+  scan:
+    basePackages: com.offcn.service
+
+#Springboot端口，采用-1 随机
+server:
+  port: -1
